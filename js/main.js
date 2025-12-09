@@ -35,3 +35,27 @@ window.addEventListener('resize', () => {
     initSwiper();
   }
 });
+
+
+let activeFaq = document.querySelector('.faq__item--active');
+
+if (activeFaq) {
+  document.addEventListener('click', (e) => {
+    const faqItem = e.target.closest('.faq__item-top');
+
+    if (faqItem) {
+      const parent = faqItem.parentElement;
+      if (activeFaq)
+        activeFaq.classList.remove('faq__item--active');
+
+      if (parent === activeFaq) {
+        activeFaq = null
+        return
+      }
+
+      parent.classList.add('faq__item--active');
+      activeFaq = parent;
+
+    }
+  })
+}
