@@ -64,3 +64,28 @@ AOS.init({
   duration: 1200,
   once: true,
 })
+
+const modal = document.querySelector('.modal');
+if (modal) {
+  const modalButton = document.querySelector('.modal__button');
+  const modalContent = document.querySelector('.modal__content');
+  const modalOutline = document.querySelector('.modal__outline');
+  setTimeout(() => {
+    modal.classList.add('modal--active');
+    document.body.classList.add('body-overflow');
+  }, 2000)
+
+  modalOutline.addEventListener('click', (e) => {
+    modal.classList.remove('modal--active');
+    document.body.classList.remove('body-overflow');
+  })
+
+  modalButton.addEventListener('click', (e) => {
+    modal.classList.remove('modal--active');
+    document.body.classList.remove('body-overflow');
+  })
+
+  modalContent.addEventListener('click', (e) => {
+    e.stopPropagation();
+  })
+}
