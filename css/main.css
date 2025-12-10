@@ -941,7 +941,7 @@ svg {
 }
 
 .authorization__rule {
-    padding: 15px 16px 0;
+    padding: 7.5px 16px;
     height: 71px;
     display: flex;
     align-items: center;

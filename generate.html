@@ -8,7 +8,10 @@
 	<link rel="stylesheet" href="css/fonts.css"/>
 	<link rel="stylesheet" href="css/reset.css"/>
 	<link rel="stylesheet" href="css/main.css"/>
+	<link rel="stylesheet" href="libs/aos/aos.min.css"/>
 
+	<script src="libs/aos/aos.min.js" defer></script>
+	<script src="js/main.js" defer></script>
 	<title>Document</title>
 </head>
 <body>
@@ -30,9 +33,9 @@
 
 
 <main class="main">
-	<section class="generate" data-aos="fade-up">
+	<section class="generate">
 		<div class="container generate__inner">
-			<div class="generate__box">
+			<div class="generate__box" data-aos="fade-up">
 				<h3 class="generate__title">
 					<svg width="32" height="32">
 						<use xlink:href="img/icons.svg#check"></use>
@@ -73,7 +76,7 @@
 					</button>
 				</div>
 			</div>
-			<div class="generate__box">
+			<div class="generate__box" data-aos="fade-up">
 				<div class="controllers">
 					<button class="controllers__button controllers__button--active">Video</button>
 					<button class="controllers__button">Undress</button>
